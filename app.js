@@ -48,5 +48,70 @@ const data = [
 // Take the data above and display it as tiles on the page
 
 
+/* function for creating div cards */
 
 
+
+
+function createDiv() {
+    const locateCardDiv = document.querySelector('#content')
+    const createCardDiv = document.createElement('div')
+    createCardDiv.className = 'card'
+    const cardDiv = locateCardDiv.appendChild(createCardDiv)
+    return cardDiv
+}
+
+
+/* functions for creating title and topic div */
+function createTopicDiv() {
+    const createTopicsDiv = document.createElement('div')
+    createTopicsDiv.className = 'topic'
+    return createTopicsDiv
+}
+
+function createTitleDiv() {
+    const createTitlesDiv = document.createElement('div')
+    createTitlesDiv.className = 'title'
+    return createTitlesDiv
+}
+
+function createButton() {
+    const createButtonDiv = document.createElement('div')
+    createButtonDiv.className = 'buy-button'
+    createButtonDiv.textContent = "data.price"
+    return createButtonDiv
+}
+
+/*function for putting data into card*/
+
+function createCard(data) {
+   const cardDiv = createDiv(data)
+   const divTitle = createTitleDiv(data.title)
+   const topicDiv = createTopicDiv(data.topic)
+   const buttonDiv = createButton(data.price)
+   cardDiv.appendChild(divTitle)
+   cardDiv.appendChild(topicDiv)
+   cardDiv.appendChild(buttonDiv)
+   return cardDiv
+}
+
+const createTopicsDiv = createTopicDiv()
+const createTitlesDiv = createTitleDiv()
+const createButtonDiv = createButton()
+
+let index 
+const cardDiv = createCard(data)
+for (let index = 0; index < data.length; index++) {
+    const cardData = [index];
+    const completeCard = createCard(data[index]);
+    cardDiv.appendChild(completeCard)
+  }
+
+
+
+
+
+
+
+// const locateTopicsDiv = document.querySelector('.card')
+// const topicDiv = locateTopicsDiv.appendChild(createTopicsDiv)
