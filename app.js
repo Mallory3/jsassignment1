@@ -50,7 +50,13 @@ const data = [
 
 /* function for creating div cards */
 
-
+let index 
+const cardDiv = createCard(data)
+for (let index = 0; index < data.length; index++) {
+    const cardData = data[index];
+    const completeCard = createCard(data);
+    cardDiv.appendChild(completeCard)
+  }
 
 
 function createDiv() {
@@ -95,21 +101,16 @@ function createCard(data) {
    return cardDiv
 }
 
-const createTopicsDiv = createTopicDiv()
-const createTitlesDiv = createTitleDiv()
-const createButtonDiv = createButton()
-
-let index 
-const cardDiv = createCard(data)
-for (let index = 0; index < data.length; index++) {
-    const cardData = [index];
-    const completeCard = createCard(data[index]);
-    cardDiv.appendChild(completeCard)
-  }
 
 
 
 
+
+
+
+// const createTopicsDiv = createTopicDiv()
+// const createTitlesDiv = createTitleDiv()
+// const createButtonDiv = createButton()
 
 
 
