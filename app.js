@@ -50,15 +50,17 @@ const data = [
 
 /* function for creating div cards */
 
-let index 
-const cardDiv = createCard(data)
-for (let index = 0; index < data.length; index++) {
-    const cardData = data[index];
-    const completeCard = createCard(data);
-    cardDiv.appendChild(completeCard)
-  }
+// var index 
+// const cardDiv = createCard(data)
+// for (let index = 0; index < data.length; index++) {
+//     const cardData = data[index];
+//     const completeCard = createCard(data);
+//     cardDiv.appendChild(completeCard)
+//   }
 
 
+
+/*function to create div*/
 function createDiv() {
     const locateCardDiv = document.querySelector('#content')
     const createCardDiv = document.createElement('div')
@@ -84,23 +86,41 @@ function createTitleDiv() {
 function createButton() {
     const createButtonDiv = document.createElement('div')
     createButtonDiv.className = 'buy-button'
-    createButtonDiv.textContent = "data.price"
+    // createButtonDiv.textContent = [data[0].price]
     return createButtonDiv
 }
 
 /*function for putting data into card*/
-
-function createCard(data) {
-   const cardDiv = createDiv(data)
-   const divTitle = createTitleDiv(data.title)
-   const topicDiv = createTopicDiv(data.topic)
-   const buttonDiv = createButton(data.price)
-   cardDiv.appendChild(divTitle)
-   cardDiv.appendChild(topicDiv)
-   cardDiv.appendChild(buttonDiv)
+function createCard() {
+   const cardDiv = createDiv()
+   const createTitlesDiv = createTitleDiv()
+   const createTopicsDiv = createTopicDiv()
+   const createButtonDiv = createButton()
+   createTitlesDiv.textContent = (data[0].title)
+   createTopicsDiv.textContent = [data[0].topic]
+   createButtonDiv.textContent = [data[0].price]
+   cardDiv.appendChild(createTitlesDiv)
+   cardDiv.appendChild(createTopicsDiv)
+   cardDiv.appendChild(createButtonDiv)
    return cardDiv
 }
 
+/* creates 6 tiles */
+for(let i = 0; i != data.length; i++){
+    createCard();
+}
+
+
+
+// for(let i = 0; i < data[i].price.length; i++){
+//     createButton(data[0].price); 
+// }
+
+/* color 6 titles */
+// for (let index = 0; index < data.length; index++) {
+//     createTopicDiv(data[index].topic);
+    
+// }
 
 
 
