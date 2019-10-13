@@ -58,58 +58,170 @@ const data = [
 //     cardDiv.appendChild(completeCard)
 //   }
 
+// data.forEach(function createDiv() {
+    
+//         const locateCardDiv = document.querySelector('#content')
+//         const createCardDiv = document.createElement('div')
+//         createCardDiv.className = 'card'
+//         locateCardDiv.appendChild(createCardDiv)
+// })
+
+
 
 
 /*function to create div*/
-function createDiv() {
+// function createDiv() {
+//     const locateCardDiv = document.querySelector('#content')
+//     const createCardDiv = document.createElement('div')
+//     createCardDiv.className = 'card'
+//     const cardDiv = locateCardDiv.appendChild(createCardDiv)
+//     return cardDiv
+// }
+
+
+/* functions for creating title and topic div */
+data.forEach(function createCards(div) {
+
     const locateCardDiv = document.querySelector('#content')
     const createCardDiv = document.createElement('div')
     createCardDiv.className = 'card'
     const cardDiv = locateCardDiv.appendChild(createCardDiv)
-    return cardDiv
-}
+    cardDiv.style.backgroundColor = div.color
 
 
-/* functions for creating title and topic div */
-function createTopicDiv() {
     const createTopicsDiv = document.createElement('div')
     createTopicsDiv.className = 'topic'
-    return createTopicsDiv
-}
+    createTopicsDiv.textContent = div.topic
+    cardDiv.appendChild(createTopicsDiv)
 
-function createTitleDiv() {
     const createTitlesDiv = document.createElement('div')
     createTitlesDiv.className = 'title'
-    return createTitlesDiv
-}
+    createTitlesDiv.textContent = div.title
+    cardDiv.appendChild(createTitlesDiv)
 
-function createButton() {
     const createButtonDiv = document.createElement('div')
     createButtonDiv.className = 'buy-button'
-    // createButtonDiv.textContent = [data[0].price]
-    return createButtonDiv
-}
+    createButtonDiv.textContent = div.price
+    cardDiv.appendChild(createButtonDiv)
+
+})
+
+
+
+// function createTopicDiv(div) {
+//     const cardDiv = createDiv()
+//     const createTopicsDiv = document.createElement('div')
+//     createTopicsDiv.className = 'topic'
+//     document.write(div.title)
+//     cardDiv.appendChild(createTopicsDiv)
+// }
+
+// function createTitleDiv() {
+//     const cardDiv = createDiv()
+//     const createTitlesDiv = document.createElement('div')
+//     createTitlesDiv.className = 'title'
+//     cardDiv.appendChild(createTitlesDiv)
+// }
+
+// function createButton() {
+//     const cardDiv = createDiv()
+//     const createButtonDiv = document.createElement('div')
+//     createButtonDiv.className = 'buy-button'
+//     cardDiv.appendChild(createButtonDiv)
+// }
 
 /*function for putting data into card*/
-function createCard() {
-   const cardDiv = createDiv()
-   const createTitlesDiv = createTitleDiv()
-   const createTopicsDiv = createTopicDiv()
-   const createButtonDiv = createButton()
-   createTitlesDiv.textContent = (data[0].title)
-   createTopicsDiv.textContent = [data[0].topic]
-   createButtonDiv.textContent = [data[0].price]
-   cardDiv.appendChild(createTitlesDiv)
-   cardDiv.appendChild(createTopicsDiv)
-   cardDiv.appendChild(createButtonDiv)
-   return cardDiv
-}
+// function createCard() {
+//    const cardDiv = createDiv()
+//    const createTitlesDiv = createTitleDiv()
+//    const createTopicsDiv = createTopicDiv()
+//    const createButtonDiv = createButton()
+//    cardDiv.appendChild(createTitlesDiv)
+//    cardDiv.appendChild(createTopicsDiv)
+//    cardDiv.appendChild(createButtonDiv)
+// }
+
 
 /* creates 6 tiles */
-for(let i = 0; i != data.length; i++){
-    createCard();
-}
 
+// data.forEach(function(){
+//     createCard()
+// })
+
+
+
+
+
+
+// data.forEach(function(titles) {
+//     createButton() {
+//     const createButtonDiv = createButton()
+//     createButtonDiv.textContent(titles.title)
+//     }
+// })
+
+
+// var i 
+// var j
+// var k
+
+// for(let i = 0; i < data.length; i++) {
+//     // for(let j =0; j < data[i].title.length; j++) {
+        
+//     // }
+//     // for(let k =0; k < data[i].topic.length; j++) {
+        
+//     // }
+//     createDiv()
+// }
+
+
+
+// var j
+
+
+
+
+    
+
+
+// var i
+// function addButtonData() {
+//     const card = createCard()
+//     const createButtonDiv = createButton()
+//     createButtonDiv.textContent = [data[i].price]
+//     card.appendChild(createButtonDiv)
+//     return createButtonDiv
+
+// }
+
+// for(let i = 0; i != data.length; i++){
+//     addButtonData();
+// }
+
+
+// function createCard2() {
+//     const cardDiv = createDiv()
+//     const createTitlesDiv = createTitleDiv()
+//     const createTopicsDiv = createTopicDiv()
+//     const createButtonDiv = createButton()
+//     createTitlesDiv.textContent = (data[1].title)
+//     createTopicsDiv.textContent = [data[1].topic]
+//     createButtonDiv.textContent = [data[1].price]
+//     cardDiv.appendChild(createTitlesDiv)
+//     cardDiv.appendChild(createTopicsDiv)
+//     cardDiv.appendChild(createButtonDiv)
+//  }
+ 
+ /* creates 6 tiles */
+//  for(let i = 0; i != data.length; i++){
+//      createCard2();
+//  }
+
+ /* creates 6 tiles */
+//  for(let i = 0; i != data.length; i++){
+//      createCard3();
+//  }
 
 
 // for(let i = 0; i < data[i].price.length; i++){
